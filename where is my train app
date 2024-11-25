@@ -1,0 +1,86 @@
+import { StyleSheet, Text, View,Image,TouchableOpacity,Button,ViewStyle,TextInput,} from 'react-native'
+
+
+
+const index = () => {
+
+  return (
+    <View style={styles.container}>
+<View style={styles.firstBox}>
+  <TouchableOpacity style={styles.firstBox}>
+    <Image source={require('../assets/images/menu-2-line (1).png')} style={styles.txt}></Image>
+  </TouchableOpacity>
+  <Text style={styles.txt}>where is my train </Text>
+
+</View>
+<View style={styles.secondBox}>
+  <TouchableOpacity style={styles.secondBox}><Text style={styles.txt}>express</Text></TouchableOpacity>
+  <TouchableOpacity style={styles.secondBox}><Text style={styles.txt}>metro</Text></TouchableOpacity>
+</View>
+<View style={styles. whiteSection}>
+  <View  style={styles.  station}>
+    <View>
+  <TouchableOpacity style={styles.images}>
+  <Image source={require('../assets/images/circle-line (1).png')}></Image><Line/>
+  <Image source={require('../assets/images/arrow-down-s-line.png')} style={styles.arrow}></Image>
+  <Image source={require('../assets/images/circle-line (1).png')}></Image>
+  </TouchableOpacity></View>
+  <View>
+  <TouchableOpacity ><Text style={styles.stationTxt}>sealdah</Text></TouchableOpacity>
+  <TouchableOpacity style={styles.circle}><Image source={require('../assets/images/arrow-up-down-fill (1).png')} ></Image></TouchableOpacity>
+  <Seprate/>
+  <TouchableOpacity ><Text style={styles.stationTxt}>dumdum</Text></TouchableOpacity>
+  <TouchableOpacity><Image source={require('../assets/images/close-line.png')} style={styles.close}></Image></TouchableOpacity>
+  <TouchableOpacity><Image source={require('../assets/images/close-line.png')} style={styles.close}></Image></TouchableOpacity>
+  <TouchableOpacity style={styles.button}><Text style={styles.txts}>Find Trains</Text></TouchableOpacity></View>
+ 
+  </View>
+
+  <View style={styles.input}>
+<Text style={styles.itxt}>station-indicator at:</Text>
+  <TouchableOpacity>
+    <TextInput style={styles.inputBox} placeholder='Enter Station Name'/>
+
+  </TouchableOpacity>
+</View>
+</View>
+
+    </View>
+  )
+}
+
+export default index
+
+const styles = StyleSheet.create({
+    container:{flex:1,backgroundColor:"yellow",color:'white',width:"100%",},
+    txt:{color:'lime',fontSize:25,marginLeft:7,textAlign:'center'},
+    pic:{height:300,width:200,},
+    firstBox:{backgroundColor:'black',color:'lime',display:'flex',flexDirection:'row',fontSize:25,gap:30,alignItems:'center',height:60,paddingLeft:7,borderColor:'black',borderEndColor:'black',marginBottom:0.6,},
+    
+    secondBox:{backgroundColor:'black',color:'lime',display:'flex',flexDirection:'row',fontSize:25,gap:30,alignItems:'center',height:60,justifyContent:"space-around",textTransform:'capitalize',}
+    ,
+    station:{width:"96%",height:180,backgroundColor:'black',alignItems:'center',borderRadius:6,marginTop:6,display:'flex',flexDirection:"row",shadowColor:'black',borderColor:'balck',},
+    whiteSection:{flex:1,backgroundColor:'#9b59b6',alignItems:'center'},
+    button:{backgroundColor:'lime',width:'96%',textAlign:'center',borderRadius:3,padding:2,},
+    line:{height:1,width:'80%',color:'lime'},
+    stationTxt:{margin:20,color:'lime',fontSize:19,marginLeft:50},
+    stationEffect:{display:'flex',flexDirection:'row'},
+    arrow:{height:9,objectFit:'cover' ,color:'red',
+    
+      
+    },
+    images:{height:10,width:10,display:'flex',marginLeft:5,marginTop:-62},
+    circle:{height:50,width:50,borderRadius:50,backgroundColor:'#9b59b6',borderColor:'black',borderWidth:1,position:'absolute' ,left:220,top:40,display:'flex',alignItems:'center',justifyContent:'center',zIndex:5}
+,
+greenarrow:{color:'green',backgroundColor:'red'},
+close:{height:30,zIndex:7,width:30,display:'flex',flexDirection:'column',position:'absolute',},
+input:{width:"96%",height:120,backgroundColor:'black',marginTop:6,borderRadius:6},
+inputBox:{height:50,width:'96%',backgroundColor:'white',borderRadius:6,borderColor:'black',borderWidth:1,marginTop:15,marginLeft:7},
+itxt:{color:'lime',fontSize:25,marginLeft:7},
+txts:{color:"#9b59b6",fontSize:25,marginLeft:7,textAlign:'center'}
+})
+
+const seprator: ViewStyle={height:1,width:"95%",backgroundColor:'lime',marginLeft:30}
+const Seprate=()=><View style={seprator}/>
+const liner: ViewStyle={height:30,width:1,backgroundColor:'#9b59b6',marginLeft:12}
+const Line=()=><View style={liner}/>
