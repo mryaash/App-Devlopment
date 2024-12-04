@@ -1,0 +1,37 @@
+import { StyleSheet, Text, View,TextInput ,TouchableOpacity,Image,Pressable} from 'react-native'
+import React from 'react'
+
+const index = () => {
+  return (
+	<View style={styles.container}>
+	  <Text>Sign in</Text>
+	  
+	  <TouchableOpacity style={[styles.btns,{alignItems:'flex-start',paddingLeft:25,paddingTop:9}]}>
+	  <TextInput placeholder='Email Address' keyboardType='email-address' style={styles.src}  ></TextInput>
+	  </TouchableOpacity>
+	  <TouchableOpacity style={[styles.btns,{backgroundColor:'blue'}]}><Text style={styles.txt}>continue</Text></TouchableOpacity>
+
+<View style={styles.reg}>
+	<Text style={[styles.txt,{fontSize:12,marginLeft:-110}]}>Dont have an Account?</Text>
+
+	<TouchableOpacity >
+	<Text style={[styles.txt,{fontSize:13,fontWeight:'bold'}]}>  Creat one</Text></TouchableOpacity>
+	</View>
+
+	  <TouchableOpacity style={[styles.btns,{flexDirection:'row',justifyContent:'space-around',paddingRight:30,}]}><Image source={require('../assets/images/Apple svg.png')}></Image><Text style={[styles.txt,{paddingTop:-9}]}>continue With Apple</Text></TouchableOpacity>
+	  <TouchableOpacity style={[styles.btns,{flexDirection:'row',justifyContent:'space-around',paddingRight:30,}]}><Image source={require('../assets/images/Google - png 0.png')}></Image><Text style={[styles.txt,{paddingTop:-9}]}>continue With Google</Text></TouchableOpacity>
+	  <TouchableOpacity style={[styles.btns,{flexDirection:'row',justifyContent:'space-around',paddingRight:30,}]}><Image source={require('../assets/images/Facebook - png 0.png')}></Image><Text style={[styles.txt,{paddingTop:-9}]}>continue With Facebook</Text></TouchableOpacity>
+	</View>
+  )
+}
+
+export default index
+
+const styles = StyleSheet.create({
+	container:{flex:1,alignItems:'center',backgroundColor:'black'},
+	btns:{width:'86%',backgroundColor:'#342F3F',borderRadius:20,height:60,color:'white',textAlign:'center',marginTop:10,display:'flex',alignItems:"center"}
+	,
+	txt:{color:'white',fontSize:20,textAlign:'center',paddingTop:15},
+reg:{display:'flex',flexDirection:'row',marginBottom:60,marginTop:19},
+src:{color:'white'}
+})
